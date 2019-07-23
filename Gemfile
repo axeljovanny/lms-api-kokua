@@ -57,4 +57,4 @@ gem "jwt", "~> 2.2"
 gem "active_model_serializers", "~> 0.10.9"
 
 gem "faker", "~> 1.9"
-gem "wdm", ">= 0.1.0"
+gem "wdm", ">= 0.1.0", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
