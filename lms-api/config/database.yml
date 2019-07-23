@@ -1,0 +1,24 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  adapter: postgresql
+  database: practice-api_development
+
+test:
+  <<: *default
+  database: practice-api_test
+
+
+production:
+  <<: *default
+  adapter: postgresql
+  database: practice-api_production
+  username: practice-api
+  password: <%= ENV['PRACTICE-API_DATABASE_PASSWORD'] %>
